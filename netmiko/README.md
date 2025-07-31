@@ -57,3 +57,13 @@ This script highlights one of Netmiko's most powerful capabilities: parsing unst
 * **Structured vs. Unstructured Data**: Instead of returning one large string, the command now returns a list of dictionaries (`[{'address': '...', 'mac': '...'}, ...]`).
 * **Using Parsed Data**: The script demonstrates how to take unstructured data from the output of show commands like "show arp" and transform this into structured data like lists in python which makes further processing much easier.
 
+---
+
+### `06_sending_config_cmds.py`
+
+This script demonstrates how to make configuration changes to devices. It shows two different methods for sending commands and how to save the running configuration to make it persistent.
+
+**Key Concepts Demonstrated**:
+* **`send_config_from_file()`**: This method is used to send a set of commands stored in an external text file (`cmds.txt`). This is very useful for applying large or standardized configurations.
+* **`send_config_set()`**: This method is used to send a list of commands that are defined directly within the Python script. It's ideal for smaller, dynamic, or more targeted changes.
+* **`save_config()`**: After making changes, this command is used to save the running configuration to the startup configuration (the equivalent of `copy running-config startup-config` or `write memory`). This ensures the changes persist after a reboot.
