@@ -67,3 +67,13 @@ This script demonstrates how to make configuration changes to devices. It shows 
 * **`send_config_from_file()`**: This method is used to send a set of commands stored in an external text file (`cmds.txt`). This is very useful for applying large or standardized configurations.
 * **`send_config_set()`**: This method is used to send a list of commands that are defined directly within the Python script. It's ideal for smaller, dynamic, or more targeted changes.
 * **`save_config()`**: After making changes, this command is used to save the running configuration to the startup configuration (the equivalent of `copy running-config startup-config` or `write memory`). This ensures the changes persist after a reboot.
+
+---
+
+### `07_troubleshooting_netmiko.py`
+
+This script covers essential techniques for debugging and handling advanced use-cases where standard Netmiko methods might not be sufficient.
+
+**Key Concepts Demonstrated**:
+* **Enabling Logging**: The script configures Python's `logging` module to capture all underlying SSH communications from Netmiko and save them to a file (`netmiko_debug.log`). Reviewing this log is the single most effective way to diagnose connection and command issues.
+* **Low-Level Channel Access**: It demonstrates the use of `write_channel()` and `read_channel()`. These methods provide direct, raw access to the SSH channel, allowing you to send commands and read output manually. This is an "escape hatch" for dealing with non-standard prompts, banner screens, or situations where you need fine-grained control over the interaction timing.
