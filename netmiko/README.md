@@ -23,3 +23,14 @@ This script builds on the first by demonstrating how to move between different o
 * **Changing Modes**: Uses `.enable()` to enter privileged exec mode and `.config_mode()` to enter global configuration mode.
 * **Finding the Prompt**: Shows how `.find_prompt()` can be used to identify the device's current prompt, which changes with each mode.
 * **Enable Secret**: The `secret` parameter in the device dictionary is used as the enable password.
+
+---
+
+### `03_sending_show_commands.py`
+
+This script demonstrates how to scale a simple task across multiple devices. It reads from a list of devices, connects to each one sequentially, and runs a unique command on each.
+
+**Key Concepts Demonstrated**:
+* **Iteration**: Uses a `for` loop to perform the same set of actions on a list of different devices. This is a foundational concept for scaling automation.
+* **Data Structures**: Organizes devices and commands into a list of tuples `[(device_dict, command_str)]`, a clean way to manage targets and tasks.
+* **Per-Device Error Handling**: The `try/except` block is inside the loop, so if one device fails, the script reports the error and continues to the next device.
