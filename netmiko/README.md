@@ -45,3 +45,15 @@ This script tackles a common challenge in automation: handling commands that req
 * **`send_command_timing()`**: This is the core of the script. Unlike `send_command()`, which waits for a standard device prompt (`#` or `>`), `send_command_timing()` waits for a short period of inactivity. This is perfect for capturing intermediate prompts like `[confirm]`.
 * **Interactive Workflow**: The script sends the `delete` command, checks the output for the word "confirm" or "delete", and then sends a newline character (`\n`) to simulate pressing the Enter key.
 * **Pre and Post Checks**: It verifies the file exists before attempting deletion and confirms it's gone afterward, a crucial practice for reliable automation.
+
+---
+
+### `05_textfsm.py`
+
+This script highlights one of Netmiko's most powerful capabilities: parsing unstructured command-line output into structured data using TextFSM.
+
+**Key Concepts Demonstrated**:
+* **`use_textfsm=True`**: This simple argument tells Netmiko to find a matching TextFSM template for the command being run (`show arp`) and use it to parse the output.
+* **Structured vs. Unstructured Data**: Instead of returning one large string, the command now returns a list of dictionaries (`[{'address': '...', 'mac': '...'}, ...]`).
+* **Using Parsed Data**: The script demonstrates how to take unstructured data from the output of show commands like "show arp" and transform this into structured data like lists in python which makes further processing much easier.
+
