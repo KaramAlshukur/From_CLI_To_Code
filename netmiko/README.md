@@ -15,7 +15,7 @@ This script demonstrates the most fundamental task in network automation: connec
 
 ---
 
-### `02_find_prompt.py`
+### `02_cli_prompt_navigation.py`
 
 This script builds on the first by demonstrating how to move between different operational modes on a Cisco IOS device.
 
