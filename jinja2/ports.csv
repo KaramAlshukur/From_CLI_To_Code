@@ -1,0 +1,6 @@
+switch_hostname,interface,description,access_vlan,is_voip
+access-sw-01,GigabitEthernet1/0/1,HR-Desktop-User01,101,False
+access-sw-01,GigabitEthernet1/0/2,HR-VoIP-Phone01,101,True
+access-sw-01,GigabitEthernet1/0/3,HR-Desktop-User02,101,False
+access-sw-02,GigabitEthernet1/0/5,HR-Manager-Desktop,101,False
+access-sw-02,GigabitEthernet1/0/6,HR-Manager-Phone,101,True

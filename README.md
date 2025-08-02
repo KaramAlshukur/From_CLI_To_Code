@@ -6,11 +6,14 @@ Welcome! This repository documents my journey from traditional network CLI to mo
 
 This project contains scripts and configurations for various automation tools. Please choose a technology below for detailed examples and explanations.
 
-* ### 🐍 [Netmiko Scripts](./netmiko/README.md)
+* ### [Netmiko Scripts](./netmiko/README.md)
     * A collection of Python scripts for direct device interaction using the Netmiko library.
 
-* ### 🤖 Ansible Playbooks (Coming Soon)
+* ### [Configuration Templating with Jinja2](./jinja2/README.md)
+    * Python scripts that use Jinja2 templates to generate device configurations.
+
+* ### Ansible Playbooks (Coming Soon)
     * Agentless automation for configuration management and orchestration.
 
-* ### 🏗️ Terraform Configurations (Coming Soon)
+* ### Terraform Configurations (Coming Soon)
     * Infrastructure as Code (IaC) for managing on-prem and cloud resources.

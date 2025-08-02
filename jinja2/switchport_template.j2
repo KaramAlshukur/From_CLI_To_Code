@@ -1,0 +1,11 @@
+interface {{ interface }}
+ description {{ description }}
+ switchport mode access
+ switchport access vlan {{ access_vlan }}
+ spanning-tree portfast
+!
+{% if is_voip == 'True' %}
+ switchport voice vlan 150
+ mls qos trust cos
+!
+{% endif %}

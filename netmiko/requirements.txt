@@ -1,2 +1,0 @@
-netmiko>=4.6.0
-ntc-templates 7.9.0
